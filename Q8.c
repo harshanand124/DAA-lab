@@ -1,19 +1,19 @@
 #include <stdio.h>
 void selectionSort(int arr[], int n, int* comparisons, int* swaps) {
- int i, j, min_idx;
+ int i, j, min;
  *comparisons = 0;
  *swaps = 0;
  for (i = 0; i < n - 1; i++) {
- min_idx = i;
+ min = i;
  for (j = i + 1; j < n; j++) {
- if (arr[j] < arr[min_idx]) {
- min_idx = j;
+ if (arr[j] < arr[min]) {
+ min= j;
  }
  (*comparisons)++;
  }
  int temp = arr[i];
- arr[i] = arr[min_idx];
- arr[min_idx] = temp;
+ arr[i] = arr[min];
+ arr[min] = temp;
  (*swaps)++;
  }
 }
