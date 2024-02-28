@@ -1,5 +1,24 @@
 #include<stdio.h>
 #include<math.h>
+
+int jump(int a[],int n,int key)
+{
+ int start=0;
+ int end=sqrt(n);
+ while( a[end]< key && start<n )
+ {
+ start=end;
+ end+=(sqrt(n));
+ if(end>n-1)
+ end=n;
+ }
+ for(int i=start;i<end;i++)
+ {
+ if(a[i]==key)
+ return i;
+ }
+ return -1;
+}
 int main()
 {
  int n,i,k,l;
@@ -18,22 +37,4 @@ int main()
  else
  printf("Not present");
 
-}
-int jump(int a[],int n,int key)
-{
- int start=0;
- int end=sqrt(n);
- while( a[end]< key && start<n )
- {
- start=end;
- end+=(sqrt(n));
- if(end>n-1)
- end=n;
- }
- for(int i=start;i<end;i++)
- {
- if(a[i]==key)
- return i;
- }
- return -1;
 }
