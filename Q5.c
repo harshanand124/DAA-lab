@@ -17,7 +17,7 @@ return -1;
 void main()
 {
 int n;
-int a[100],i,j,ans,c=0;
+int a[n],i,j,ans,c=0;
 printf("Enter number of eleemnts in sorted manner-\n");
 scanf("%d",&n);
 printf("Enter the elements-");
