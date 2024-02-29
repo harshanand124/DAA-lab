@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int binary_search(int arr[], int n, int key, int* comparisons) {
+int binarysearch(int arr[], int n, int key, int* comparisons) {
  int left = 0, right = n - 1;
  while (left <= right) {
  (*comparisons)++;
@@ -31,7 +31,7 @@ int main() {
  printf("Enter the element to key : ");
  scanf("%d",&key);
 
- int index = binary_search(arr, n, key, &comparisons);
+ int index = binarysearch(arr, n, key, &comparisons);
 
  
  if (index != -1) {
