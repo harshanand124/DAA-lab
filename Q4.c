@@ -1,12 +1,12 @@
 #include <stdio.h>
-int binarySearch(int arr[], int l, int r, int key) {
+int binarysearch(int arr[], int l, int r, int key) {
  int count = 0;
  while (l <= r) {
  int mid = l + (r - l) / 2;
  if (arr[mid] == key) {
  count++;
- int left = binarySearch(arr, l, mid - 1, key);
- int right = binarySearch(arr, mid + 1, r, key);
+ int left = binarysearch(arr, l, mid - 1, key);
+ int right = binarysearch(arr, mid + 1, r, key);
  return count + left + right;
  }
  else if (arr[mid] < key) {
@@ -29,7 +29,7 @@ int main() {
  }
  printf("Enter the key : ");
  scanf("%d", &key);
- int count = binarySearch(arr, 0, n - 1, key);
+ int count = binarysearch(arr, 0, n - 1, key);
  if (count == 0) {
  printf("Not Present\n");
  }
