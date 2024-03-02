@@ -1,5 +1,5 @@
 #include <stdio.h>
-void selectionSort(int arr[], int n, int* comparisons, int* swaps) {
+void selectionsort(int arr[], int n, int* comparisons, int* swaps) {
  int i, j, min;
  *comparisons = 0;
  *swaps = 0;
@@ -28,7 +28,7 @@ int main() {
  scanf("%d",&arr[t]);
  }
  int comparisons, swaps;
- selectionSort(arr, n, &comparisons, &swaps);
+ selectionsort(arr, n, &comparisons, &swaps);
  printf("Sorted array: ");
  for (int i = 0; i < n; i++)
  printf("%d ", arr[i]);
