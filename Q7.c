@@ -1,5 +1,5 @@
 #include <stdio.h>
-void insertionSort(int arr[], int n, int* comparisons, int* shifts) {
+void insertionsort(int arr[], int n, int* comparisons, int* shifts) {
  int i, j, key;
  *comparisons = 0;
  *shifts = 0;
@@ -27,7 +27,7 @@ int main() {
  scanf("%d",&arr[t]);
  }
  int comparisons, shifts;
- insertionSort(arr, n, &comparisons, &shifts);
+ insertionsort(arr, n, &comparisons, &shifts);
  printf("Sorted array: ");
  for (int i = 0; i < n; i++)
  printf("%d ", arr[i]);
