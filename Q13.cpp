@@ -18,11 +18,9 @@ void maxOccurrences(vector<char>& arr) {
         }
     }
 
-    if (duplicatesPresent) {
+    
         cout << maxChar << " - " << maxCount << endl;
-    } else {
-        cout << "No Duplicates Present" << endl;
-    }
+     
 }
 
 int main() {
