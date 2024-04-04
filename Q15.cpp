@@ -2,12 +2,12 @@
 using namespace std;
 
 void common(vector<int>& arr1, vector<int>& arr2) {
-    vector<int> commone;
+    vector<int> commons;
     int i = 0, j = 0;
 
     while (i < arr1.size() && j < arr2.size()) {
         if (arr1[i] == arr2[j]) {
-            commone.push_back(arr1[i]);
+            commons.push_back(arr1[i]);
             i++;
             j++;
         } else if (arr1[i] < arr2[j]) {
@@ -17,7 +17,7 @@ void common(vector<int>& arr1, vector<int>& arr2) {
         }
     }
 
-    for (int element : commone) {
+    for (int element : commons) {
         cout << element << " ";
     }
     cout << endl;
